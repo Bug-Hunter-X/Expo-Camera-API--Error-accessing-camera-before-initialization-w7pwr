@@ -1,0 +1,1 @@
+This error occurs when using the Expo `Camera` API and attempting to access camera features before the camera has fully initialized.  The `Camera` component's `onCameraReady` prop is crucial for handling this.  The bug is that code accessing the camera's properties (like `takePictureAsync`) is called *before* the `onCameraReady` callback is triggered.
